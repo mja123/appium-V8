@@ -1,25 +1,25 @@
-package org.mja123.appiumPractice.builtIn;
+package org.mja123.appiumPractice.builtIn.clockApp.alarm;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidBy;
 import org.mja123.appiumPractice.BasePage;
+import org.openqa.selenium.remote.RemoteWebElement;
 
 import java.util.List;
 
-public class Clock extends BasePage {
+public class AlarmHomePage extends BasePage {
 
     @AndroidBy(className = "android.widget.TextView")
-    private MobileElement alarm;
+    private RemoteWebElement alarm;
     @AndroidBy(id = "fab")
-    private MobileElement addAlarm;
+    private RemoteWebElement addAlarm;
     //modify
     @AndroidBy(id = "android.widget.RadialTimePickerView$RadialPickerTouchHelper")
-    private List<MobileElement> hours;
+    private List<RemoteWebElement> hours;
 
 
 
-    public Clock(AppiumDriver<MobileElement> driver) {
+    public AlarmHomePage(AppiumDriver driver) {
         super(driver);
     }
 
