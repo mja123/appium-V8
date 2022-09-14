@@ -5,10 +5,11 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
-    public AppiumDriver driver;
+    protected AppiumDriver driver;
 
-    public BasePage(AppiumDriver driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    protected BasePage(AppiumDriver driver) {
+
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 

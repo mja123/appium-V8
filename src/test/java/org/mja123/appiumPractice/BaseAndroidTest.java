@@ -9,20 +9,22 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BaseAndroidTest {
-    public AppiumDriver driver;
+    protected AppiumDriver driver;
 
 
-//    @Parameters({"platformVersion", "deviceName", "app"})
-//    @BeforeSuite(groups = "apkApp")
-//    public void setUpApkApp(String platformVersion, String deviceName, String app) throws MalformedURLException {
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("platformName", "Android");
-//        capabilities.setCapability("automationName", "UiAutomator2");
-//        capabilities.setCapability("platformVersion", platformVersion);
-//        capabilities.setCapability("deviceName", deviceName);
-//        capabilities.setCapability("app", app);
-//        driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
-//    }
+    @Parameters({"platformVersion", "deviceName", "app"})
+    @BeforeSuite(groups = "apkApp")
+    public void setUpApkApp(@Optional("12.0") String platformVersion,
+    @Optional("Android Emulator") String deviceName, @Optional("/app/ApiDemos-debug.apk") String app) throws MalformedURLException {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("automationName", "UiAutomator2");
+        capabilities.setCapability("platformVersion", platformVersion);
+        capabilities.setCapability("deviceName", deviceName);
+        capabilities.setCapability("app", app);
+        driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
+    }
 
     @Parameters({"platformVersion", "deviceName", "appPackage", "packageActivity"})
     @BeforeSuite(groups = "builtInApp")

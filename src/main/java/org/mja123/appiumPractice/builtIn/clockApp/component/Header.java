@@ -7,14 +7,15 @@ import org.mja123.appiumPractice.builtIn.clockApp.alarm.AlarmHomePage;
 import org.mja123.appiumPractice.builtIn.clockApp.clock.ClockHomePage;
 import org.mja123.appiumPractice.builtIn.clockApp.stopwatch.StopwatchHomePage;
 import org.mja123.appiumPractice.builtIn.clockApp.timer.TimerHomePage;
-import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 import java.util.Optional;
 
 public class Header extends BasePage {
-    @AndroidFindBy(className = "nh")
-    public List<RemoteWebElement> headerOptions;
+    @FindBy(className = "nh")
+    private List<WebElement> headerOptions;
 
     public Header(AppiumDriver driver) {
         super(driver);
@@ -23,21 +24,16 @@ public class Header extends BasePage {
     public BasePage selectOption(EHeaderOptions option) throws ElementNotFound {
         selectOptionElement(option).click();
 
-        switch (option) {
-            case ALARM:
-                return new AlarmHomePage(driver);
-            case TIMER:
-                return new TimerHomePage(driver);
-            case STOPWATCH:
-                return new StopwatchHomePage(driver);
-            default:
-                return new ClockHomePage(driver);
-
-        }
+        return switch (option) {
+            case ALARM -> new AlarmHomePage(driver);
+            case TIMER -> new TimerHomePage(driver);
+            case STOPWATCH -> new StopwatchHomePage(driver);
+            default -> new ClockHomePage(driver);
+        };
     }
-    private RemoteWebElement selectOptionElement(EHeaderOptions option) throws ElementNotFound {
+    private WebElement selectOptionElement(EHeaderOptions option) throws ElementNotFound {
 
-        Optional<RemoteWebElement> optionTarget = headerOptions.stream()
+        Optional<WebElement> optionTarget = headerOptions.stream()
                 .filter(o -> o
                         .getDomAttribute("content-desc")
                         .equals(option.getVALUE()))
