@@ -18,6 +18,7 @@ public class ClockControllerTest extends BaseAndroidTest {
     public void checkCurrentTime() throws ElementNotFound {
         Header header = new Header(driver);
 
+        System.out.println(driver.toString() + "Asdfasd");
         ClockHomePage clockPage = (ClockHomePage) header.selectOption(EHeaderOptions.CLOCK);
 
         Calendar calendar = Calendar.getInstance();

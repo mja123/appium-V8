@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Alarm">
+
+    <parameter name="platformVersion" value="12.0"/>
+    <parameter name="deviceName" value="Android Emulator"/>
+    <parameter name="appPackage" value="com.google.android.deskclock"/>
+    <parameter name="packageActivity" value="com.android.deskclock.DeskClock"/>
+    <test name="AlarmCount">
+        <classes>
+            <class name="org.mja123.appiumPractice.builtIn.clock.AlarmTest"/>
+        </classes>
+    </test>
+
+</suite>

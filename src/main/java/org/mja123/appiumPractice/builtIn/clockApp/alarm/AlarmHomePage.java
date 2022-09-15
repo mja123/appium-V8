@@ -11,8 +11,8 @@ import java.util.List;
 
 public class AlarmHomePage extends BasePage {
 
-    @FindBy(className = "android.widget.TextView")
-    private WebElement alarm;
+    @FindBy(className = "android.view.ViewGroup")
+    private List<WebElement> alarmActiveSwitch;
     @FindBy(id = "fab")
     private WebElement addAlarm;
     //modify
@@ -23,5 +23,7 @@ public class AlarmHomePage extends BasePage {
         super(driver);
     }
 
-
+    public List<WebElement> getAlarmActiveSwitch() {
+        return alarmActiveSwitch;
+    }
 }

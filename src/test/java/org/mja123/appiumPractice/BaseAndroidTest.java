@@ -13,7 +13,7 @@ public class BaseAndroidTest {
 
 
     @Parameters({"platformVersion", "deviceName", "app"})
-    @BeforeSuite(groups = "apkApp")
+    @BeforeSuite(groups = {"apkApp", "regression"})
     public void setUpApkApp(@Optional("12.0") String platformVersion,
     @Optional("Android Emulator") String deviceName, @Optional("/app/ApiDemos-debug.apk") String app) throws MalformedURLException {
 
@@ -22,12 +22,12 @@ public class BaseAndroidTest {
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("platformVersion", platformVersion);
         capabilities.setCapability("deviceName", deviceName);
-        capabilities.setCapability("app", app);
+        capabilities.setCapability("app", System.getProperty("user.dir") + app);
         driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
     }
 
     @Parameters({"platformVersion", "deviceName", "appPackage", "packageActivity"})
-    @BeforeSuite(groups = "builtInApp")
+    @BeforeSuite(groups = {"builtInApp", "regression"})
     public void setUpBuildInaPP(@Optional("12.0") String platformVersion,
     @Optional("Android Emulator")  String deviceName, @Optional("com.google.android.deskclock")  String appPackage,
     @Optional("com.android.deskclock.DeskClock") String packageActivity) throws MalformedURLException {
@@ -39,6 +39,7 @@ public class BaseAndroidTest {
         capabilities.setCapability("deviceName", deviceName);
         capabilities.setCapability("appPackage", appPackage);
         capabilities.setCapability("appActivity", packageActivity);
+        System.out.println("here");
         driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
     }
 
@@ -48,4 +49,4 @@ public class BaseAndroidTest {
     }
 }
 
-//TODO: CHANGE ACCESS MODIFIER IN CLASSES INVOLVED IN CLOCKTEST AND LOOK THE DEPENDENCIES COMPABILITY
+//TODO: Create a factory method to call the respective method to set the capabilities and add @BeforeSuite
