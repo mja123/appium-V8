@@ -19,7 +19,7 @@
         </groups>
 
         <classes>
-            <class name="org.mja123.appiumPractice.builtIn.clock.ClockControllerTest"/>
+            <class name="org.mja123.appiumPractice.android.builtIn.clock.ClockControllerTest"/>
         </classes>
     </test>
 
