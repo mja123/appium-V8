@@ -5,6 +5,7 @@
     <parameter name="platformVersion" value="12.0"/>
     <parameter name="deviceName" value="Android Emulator"/>
     <parameter name="appPackage" value="com.google.android.deskclock"/>
+
     <parameter name="packageActivity" value="com.android.deskclock.DeskClock"/>
     <test name="AlarmCount">
         <classes>

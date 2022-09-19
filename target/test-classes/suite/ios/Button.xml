@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Button Ios">
-    {"platformName", "automationName", "platformVersion", "deviceName", "app", "packageActivity"}
     <parameter name="platformName" value="iOS"/>
     <parameter name="automationName" value="XCUITest"/>
     <parameter name="platformVersion" value="16.0"/>
     <parameter name="deviceName" value="iPhone 14 Pro Max"/>
     <parameter name="app" value="/app/UIKitCatalog-iphonesimulator.app"/>
     <parameter name="packageActivity" value=""/>
+
     <test name="Bla">
         <classes>
             <class name="org.mja123.appiumPractice.ios.externalApp.ButtonsTest"/>
