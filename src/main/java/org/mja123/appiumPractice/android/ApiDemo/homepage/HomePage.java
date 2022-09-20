@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class HomePage extends BasePage {
-    @FindBy(className = "android.widget.TextView")
-    private List<WebElement> views;
+//    @FindBy(className = "android.widget.TextView")
+//    private List<WebElement> views;
 
     public HomePage(AppiumDriver driver)
     {
@@ -22,6 +22,7 @@ public class HomePage extends BasePage {
     }
 
     public BasePage selectView(EViews view) throws ElementNotFound {
+
         filterByText(view).click();
 
         return switch (view) {
@@ -30,11 +31,14 @@ public class HomePage extends BasePage {
     }
 
     private WebElement filterByText(EViews view) throws ElementNotFound {
+        List<WebElement> views = driver.findElements(By.className("android.widget.TextView"));
+        System.out.println(views.size());
 
         Optional<WebElement> targetView = views.stream()
                 .filter(v -> v.getText().equals(view.getText()))
                 .findFirst();
 
+        views.forEach(v -> System.out.println(v.getText()));
         if (targetView.isPresent()) {
             return targetView.get();
         }
