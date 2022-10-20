@@ -1,27 +1,23 @@
 package org.mja123.appiumPractice.android.ApiDemo.homepage;
 
 import io.appium.java_client.AppiumDriver;
-import org.mja123.appiumPractice.android.ApiDemo.ViewPage;
-import org.mja123.appiumPractice.android.ApiDemo.homepage.EViews;
+import org.mja123.appiumPractice.android.ApiDemo.view.ViewPage;
 import org.mja123.appiumPractice.android.BasePage;
-import org.mja123.appiumPractice.android.builtIn.clockApp.component.ElementNotFound;
+import org.mja123.appiumPractice.android.ElementNotFound;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 import java.util.Optional;
 
 public class HomePage extends BasePage {
-//    @FindBy(className = "android.widget.TextView")
-//    private List<WebElement> views;
 
     public HomePage(AppiumDriver driver)
     {
         super(driver);
     }
 
-    public BasePage selectView(EViews view) throws ElementNotFound {
+    public BasePage selectView(EHomeOptions view) throws ElementNotFound {
 
         filterByText(view).click();
 
@@ -30,7 +26,7 @@ public class HomePage extends BasePage {
         };
     }
 
-    private WebElement filterByText(EViews view) throws ElementNotFound {
+    private WebElement filterByText(EHomeOptions view) throws ElementNotFound {
         List<WebElement> views = driver.findElements(By.className("android.widget.TextView"));
         System.out.println(views.size());
 

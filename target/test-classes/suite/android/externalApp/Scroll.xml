@@ -9,15 +9,26 @@
     <parameter name="app" value="/app/ApiDemos-debug.apk"/>
     <parameter name="packageActivity" value=""/>
 
+    <test name="ScrollingOptions">
+        <groups>
+            <run>
+                <include name="scrolling"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.mja123.appiumPractice.android.externalApp.ScrollTest"/>
+        </classes>
+    </test>
+
     <test name="ScrollCoordinates">
         <classes>
             <class name="org.mja123.appiumPractice.android.externalApp.ScrollTest">
                 <methods>
-                    <include name="scrollWithActionsToElement"/>
                     <include name="scrollWithUiScrollableToElement"/>
                 </methods>
             </class>
         </classes>
     </test>
+
 
 </suite>

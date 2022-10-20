@@ -8,8 +8,6 @@ public class BasePage {
     protected AppiumDriver driver;
 
     protected BasePage(AppiumDriver driver) {
-
-        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 

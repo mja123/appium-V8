@@ -1,10 +1,10 @@
 package org.mja123.appiumPractice.android.ApiDemo.homepage;
 
-public enum EViews {
+public enum EHomeOptions {
     VIEW("Views");
 
     private final String text;
-    EViews(String text) {
+    EHomeOptions(String text) {
         this.text = text;
     }
 
