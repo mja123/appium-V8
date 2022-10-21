@@ -5,14 +5,17 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
 
+import java.lang.invoke.MethodHandles;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BaseTest {
     protected AppiumDriver driver;
-
+    protected static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     @Parameters({"platformName", "automationName", "platformVersion", "deviceName", "app", "packageActivity"})
     @BeforeMethod(alwaysRun = true)
     public void setUp(@Optional("Android") String platformName, @Optional("UiAutomator2") String automationName,
@@ -26,7 +29,6 @@ public class BaseTest {
         capabilities.setCapability("automationName", automationName);
         capabilities.setCapability("platformVersion", platformVersion);
         capabilities.setCapability("deviceName", deviceName);
-        System.out.println("times");
 
         if (packageActivity.equals("")) {
             capabilities.setCapability("app", System.getProperty("user.dir") + app);
@@ -35,6 +37,7 @@ public class BaseTest {
             capabilities.setCapability("appActivity", packageActivity);
         }
 
+        LOGGER.info("Instantiating driver");
         if (platformName.equals("Android")) {
             driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
         } else {

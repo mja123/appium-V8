@@ -20,7 +20,6 @@ public class HomePage extends BasePage {
     public BasePage selectView(EHomeOptions view) throws ElementNotFound {
 
         filterByText(view).click();
-
         return switch (view) {
             case VIEW -> new ViewPage(driver);
         };
@@ -28,13 +27,11 @@ public class HomePage extends BasePage {
 
     private WebElement filterByText(EHomeOptions view) throws ElementNotFound {
         List<WebElement> views = driver.findElements(By.className("android.widget.TextView"));
-        System.out.println(views.size());
 
         Optional<WebElement> targetView = views.stream()
                 .filter(v -> v.getText().equals(view.getText()))
                 .findFirst();
 
-        views.forEach(v -> System.out.println(v.getText()));
         if (targetView.isPresent()) {
             return targetView.get();
         }
