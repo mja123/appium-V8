@@ -8,39 +8,21 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Scroll</th></tr>
-<tr><td><a href="#t0">ScrollingOptions</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">36,525</td><td>scrolling</td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">ScrollCoordinates</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">11,396</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">47,921</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Drag and drop</th></tr>
+<tr><td><a href="#t0">Drag and drop regression</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">14,282</td><td>regression</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Drag and drop smoke</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12,145</td><td>smoke</td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">26,427</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Scroll</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ScrollingOptions &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">org.mja123.appiumPractice.android.externalApp.ScrollTest</td><td><a href="#m0">searchElementScrolling</a></td><td rowspan="1">1666380689616</td><td rowspan="1">9487</td></tr><tr class="passedeven"><td><a href="#m1">searchElementWithOutScroll</a></td><td rowspan="1">1666380702525</td><td rowspan="1">2210</td></tr><tr class="passedeven"><td><a href="#m2">searchNonexistentElement</a></td><td rowspan="1">1666380708088</td><td rowspan="1">8072</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">ScrollCoordinates &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">org.mja123.appiumPractice.android.externalApp.ScrollTest</td><td><a href="#m3">scrollWithUiScrollableToElement</a></td><td rowspan="1">1666380724590</td><td rowspan="1">8019</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Drag and drop</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Drag and drop regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.mja123.appiumPractice.android.externalApp.DragAndDropTest</td><td><a href="#m0">checkResultText</a></td><td rowspan="1">1666982320000</td><td rowspan="1">3848</td></tr><tr class="passedeven"><td><a href="#m1">dragAndDropValidDots</a></td><td rowspan="1">1666982327190</td><td rowspan="1">3257</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Drag and drop smoke &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.mja123.appiumPractice.android.externalApp.DragAndDropTest</td><td><a href="#m2">checkEmptyResultText</a></td><td rowspan="1">1666982338805</td><td rowspan="1">2841</td></tr><tr class="passedeven"><td><a href="#m3">dragAndDropInvalidDot</a></td><td rowspan="1">1666982344945</td><td rowspan="1">2667</td></tr></tbody>
 </table>
-<h2>ScrollingOptions</h2><h3 id="m0">org.mja123.appiumPractice.android.externalApp.ScrollTest#searchElementScrolling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.mja123.appiumPractice.android.externalApp.ScrollTest#searchElementWithOutScroll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">org.mja123.appiumPractice.android.externalApp.ScrollTest#searchNonexistentElement</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
-System info: host: &apos;MacBook-Pro-de-solvd.local&apos;, ip: &apos;2803:9800:b841:8018:5caa:7a1:5672:46b1%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.6&apos;, java.version: &apos;17.0.4&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [bf46e5c1-32a2-4f7a-8d4f-783e4a60f575, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(&quot;fake element&quot;))}]
-Capabilities {appium:app: /Users/solvd/Desktop/appium..., appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/solvd/Desktop/appium..., automationName: UiAutomator2, deviceName: Android Emulator, platformName: android, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x2560, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: bf46e5c1-32a2-4f7a-8d4f-783e4a60f575
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:189)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.mja123.appiumPractice.android.ApiDemo.view.ViewPage.scrollToElementUiScrollable(ViewPage.java:17)
-	at org.mja123.appiumPractice.android.ApiDemo.view.ViewPage.selectView(ViewPage.java:23)
-	at org.mja123.appiumPractice.android.externalApp.ScrollTest.searchNonexistentElement(ScrollTest.java:55)
+<h2>Drag and drop regression</h2><h3 id="m0">org.mja123.appiumPractice.android.externalApp.DragAndDropTest#checkResultText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.mja123.appiumPractice.android.externalApp.DragAndDropTest#dragAndDropValidDots</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Drag and drop smoke</h2><h3 id="m2">org.mja123.appiumPractice.android.externalApp.DragAndDropTest#checkEmptyResultText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.mja123.appiumPractice.android.externalApp.DragAndDropTest#dragAndDropInvalidDot</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">org.mja123.appiumPractice.android.ElementNotFound: Source and/or destination values out of range
+	at org.mja123.appiumPractice.android.ApiDemo.view.DragAndDropPage.dragAndDropDot(DragAndDropPage.java:30)
+	at org.mja123.appiumPractice.android.externalApp.DragAndDropTest.dragAndDropInvalidDot(DragAndDropTest.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ScrollCoordinates</h2><h3 id="m3">org.mja123.appiumPractice.android.externalApp.ScrollTest#scrollWithUiScrollableToElement</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

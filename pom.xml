@@ -54,7 +54,6 @@
             <version>2.19.0</version>
         </dependency>
 
-
     </dependencies>
 
     <build>
@@ -65,7 +64,7 @@
                 <version>3.0.0-M7</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <file>src/test/resources/suite/${suite}</file>
+                        <file>${project.build.directory}/test-classes/suite/${suite}</file>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

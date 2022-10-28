@@ -16,7 +16,7 @@ public class ScrollTest extends BaseTest {
 
     @Test
     public void scrollWithUiScrollableToElement() throws ElementNotFound {
-        LOGGER.info("Starting test");
+        LOGGER.info("Starting scrollWithUiScrollableToElement");
         HomePage homePage = new HomePage(driver);
 
         ViewPage viewPage =  (ViewPage) homePage.selectView(EHomeOptions.VIEW);
@@ -26,7 +26,7 @@ public class ScrollTest extends BaseTest {
 
     @Test(groups = "scrolling")
     public void searchElementWithOutScroll() throws ElementNotFound {
-        LOGGER.info("Starting test");
+        LOGGER.info("Starting searchElementWithOutScroll");
         HomePage homePage = new HomePage(driver);
 
         ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
@@ -38,7 +38,7 @@ public class ScrollTest extends BaseTest {
     }
     @Test(groups = "scrolling")
     public void searchElementScrolling() throws ElementNotFound {
-        LOGGER.info("Starting test");
+        LOGGER.info("Starting searchElementScrolling");
         HomePage homePage = new HomePage(driver);
 
         ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
@@ -50,7 +50,7 @@ public class ScrollTest extends BaseTest {
     @Test(expectedExceptions = NoSuchElementException.class,
     groups = "scrolling")
     public void searchNonexistentElement() throws ElementNotFound {
-        LOGGER.info("Starting test");
+        LOGGER.info("Starting searchNonexistentElement");
         HomePage homePage = new HomePage(driver);
 
         ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);

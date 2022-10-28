@@ -1,0 +1,24 @@
+version: "3"
+services:
+  hub:
+    image: seleniarm/hub:4.5.2-20221021
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+  android:
+    image: budtmo/docker-android-x86-12.0:v1.10-p7
+    privileged: true
+    ports:
+      - "6080"
+    depends_on:
+      - hub
+    volumes:
+      - ./app/ApiDemos-debug.apk:/root/tmp/ApiDemos-debug.apk
+      #- ./json/android.json:/root/nodeconfig.json
+    environment:
+      - DEVICE=Samsung Galaxy S10
+      - CONNECT_TO_GRID=true
+#      - CUSTOM_NODE_CONFIG=true
+      - APPIUM=true
+      - SELENIUM_HOST=hub
+      - SELENIUM_PORT=4444
