@@ -1,3 +1,5 @@
+org/mja123/appiumPractice/android/ApiDemo/view/progressBar/IncrementalBarPage.class
+org/mja123/appiumPractice/android/ApiDemo/view/progressBar/ProgressBarPage.class
 org/mja123/appiumPractice/android/ElementNotFound.class
 org/mja123/appiumPractice/android/ApiDemo/view/WebViewPage.class
 org/mja123/appiumPractice/android/ApiDemo/view/ViewPage.class
@@ -12,6 +14,8 @@ org/mja123/appiumPractice/android/builtIn/clockApp/alarm/AlarmHomePage.class
 org/mja123/appiumPractice/android/ApiDemo/homepage/HomePage.class
 org/mja123/appiumPractice/android/ApiDemo/view/ViewPage$1.class
 org/mja123/appiumPractice/android/ApiDemo/homepage/HomePage$1.class
+org/mja123/appiumPractice/android/ApiDemo/view/progressBar/DialogsPage.class
 org/mja123/appiumPractice/android/builtIn/clockApp/component/Header$1.class
 org/mja123/appiumPractice/android/builtIn/clockApp/stopwatch/StopwatchHomePage.class
+org/mja123/appiumPractice/android/OutOfRangeException.class
 org/mja123/appiumPractice/android/BasePage.class

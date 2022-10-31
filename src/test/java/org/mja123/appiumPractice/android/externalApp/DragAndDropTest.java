@@ -17,7 +17,7 @@ public class DragAndDropTest extends BaseTest {
         LOGGER.info("Starting dragAndDropValidDots");
         HomePage homePage = new HomePage(driver);
 
-        ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
+        ViewPage viewPage = (ViewPage) homePage.selectPage(EHomeOptions.VIEW);
 
         DragAndDropPage dragAndDropPage = (DragAndDropPage) viewPage.selectView(EViews.DRAG_DROP);
 
@@ -31,7 +31,7 @@ public class DragAndDropTest extends BaseTest {
         LOGGER.info("Starting dragAndDropInvalidDot");
         HomePage homePage = new HomePage(driver);
 
-        ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
+        ViewPage viewPage = (ViewPage) homePage.selectPage(EHomeOptions.VIEW);
 
         DragAndDropPage dragAndDropPage = (DragAndDropPage) viewPage.selectView(EViews.DRAG_DROP);
 
@@ -43,19 +43,19 @@ public class DragAndDropTest extends BaseTest {
         LOGGER.info("Starting checkEmptyResultText");
         HomePage homePage = new HomePage(driver);
 
-        ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
+        ViewPage viewPage = (ViewPage) homePage.selectPage(EHomeOptions.VIEW);
 
         DragAndDropPage dragAndDropPage = (DragAndDropPage) viewPage.selectView(EViews.DRAG_DROP);
 
         Assert.assertEquals(dragAndDropPage.displayResultText(), "");
     }
 
-    @Test(groups = {"regression"})
+    @Test()
     public void checkResultText() throws ElementNotFound {
         LOGGER.info("Starting checkResultText");
         HomePage homePage = new HomePage(driver);
 
-        ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
+        ViewPage viewPage = (ViewPage) homePage.selectPage(EHomeOptions.VIEW);
 
         DragAndDropPage dragAndDropPage = (DragAndDropPage) viewPage.selectView(EViews.DRAG_DROP);
 

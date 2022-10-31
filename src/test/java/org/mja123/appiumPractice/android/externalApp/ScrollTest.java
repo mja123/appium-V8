@@ -14,46 +14,36 @@ import org.testng.annotations.*;
 
 public class ScrollTest extends BaseTest {
 
-    @Test
-    public void scrollWithUiScrollableToElement() throws ElementNotFound {
-        LOGGER.info("Starting scrollWithUiScrollableToElement");
-        HomePage homePage = new HomePage(driver);
-
-        ViewPage viewPage =  (ViewPage) homePage.selectView(EHomeOptions.VIEW);
-
-        Assert.assertEquals(viewPage.scrollToElementUiScrollable("TextClock").getText(), "TextClock");;
-    }
-
-    @Test(groups = "scrolling")
+    @Test(groups ="scrolling")
     public void searchElementWithOutScroll() throws ElementNotFound {
         LOGGER.info("Starting searchElementWithOutScroll");
         HomePage homePage = new HomePage(driver);
 
-        ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
+        ViewPage viewPage = (ViewPage) homePage.selectPage(EHomeOptions.VIEW);
 
         DragAndDropPage dragAndDropPage = (DragAndDropPage) viewPage.selectView(EViews.DRAG_DROP);
 
         Assert.assertNotNull(dragAndDropPage);
 
     }
-    @Test(groups = "scrolling")
+    @Test(groups = { "scrolling", "regression" })
     public void searchElementScrolling() throws ElementNotFound {
         LOGGER.info("Starting searchElementScrolling");
         HomePage homePage = new HomePage(driver);
 
-        ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
+        ViewPage viewPage = (ViewPage) homePage.selectPage(EHomeOptions.VIEW);
         WebViewPage webViewPage = (WebViewPage) viewPage.selectView(EViews.WEB_VIEW);
 
         Assert.assertNotNull(webViewPage);
 
     }
     @Test(expectedExceptions = NoSuchElementException.class,
-    groups = "scrolling")
+    groups = { "scrolling", "smoke" })
     public void searchNonexistentElement() throws ElementNotFound {
         LOGGER.info("Starting searchNonexistentElement");
         HomePage homePage = new HomePage(driver);
 
-        ViewPage viewPage = (ViewPage) homePage.selectView(EHomeOptions.VIEW);
+        ViewPage viewPage = (ViewPage) homePage.selectPage(EHomeOptions.VIEW);
 
         viewPage.selectView(EViews.FAKE_ELEMENT);
     }

@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="8" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-28T15:38:36 ART" name="Drag and drop" finished-at="2022-10-28T15:39:07 ART" duration-ms="31462">
+  <suite started-at="2022-10-31T13:58:10 ART" name="Progress Bar" finished-at="2022-10-31T13:59:35 ART" duration-ms="85105">
     <groups>
-      <group name="regression">
-        <method signature="DragAndDropTest.checkResultText()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" name="checkResultText" class="org.mja123.appiumPractice.android.externalApp.DragAndDropTest"/>
-        <method signature="DragAndDropTest.dragAndDropValidDots()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" name="dragAndDropValidDots" class="org.mja123.appiumPractice.android.externalApp.DragAndDropTest"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="DragAndDropTest.checkEmptyResultText()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" name="checkEmptyResultText" class="org.mja123.appiumPractice.android.externalApp.DragAndDropTest"/>
-        <method signature="DragAndDropTest.dragAndDropInvalidDot()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" name="dragAndDropInvalidDot" class="org.mja123.appiumPractice.android.externalApp.DragAndDropTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2022-10-28T15:38:36 ART" name="Drag and drop regression" finished-at="2022-10-28T15:38:50 ART" duration-ms="14282">
-      <class name="org.mja123.appiumPractice.android.externalApp.DragAndDropTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" started-at="2022-10-28T15:38:36 ART" name="setUp" finished-at="2022-10-28T15:38:39 ART" duration-ms="3731" status="PASS">
+    <test started-at="2022-10-31T13:58:10 ART" name="Incremental progress bar" finished-at="2022-10-31T13:59:35 ART" duration-ms="85105">
+      <class name="org.mja123.appiumPractice.android.externalApp.ProgressBarTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.mja123.appiumPractice.android.externalApp.ProgressBarTest@d62fe5b]" started-at="2022-10-31T13:58:10 ART" name="setUp" finished-at="2022-10-31T13:58:13 ART" duration-ms="3661" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,15 +43,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkResultText()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" started-at="2022-10-28T15:38:40 ART" name="checkResultText" finished-at="2022-10-28T15:38:43 ART" duration-ms="3848" status="PASS">
+        <test-method signature="emptyProgressBar()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.ProgressBarTest@d62fe5b]" started-at="2022-10-31T13:58:13 ART" name="emptyProgressBar" finished-at="2022-10-31T13:58:52 ART" duration-ms="38741" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkResultText -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" started-at="2022-10-28T15:38:43 ART" name="tearDown" finished-at="2022-10-28T15:38:43 ART" duration-ms="103" status="PASS">
+        </test-method> <!-- emptyProgressBar -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.ProgressBarTest@d62fe5b]" started-at="2022-10-31T13:58:52 ART" name="tearDown" finished-at="2022-10-31T13:58:52 ART" duration-ms="111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" started-at="2022-10-28T15:38:43 ART" name="setUp" finished-at="2022-10-28T15:38:47 ART" duration-ms="3233" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.mja123.appiumPractice.android.externalApp.ProgressBarTest@d62fe5b]" started-at="2022-10-31T13:58:52 ART" name="setUp" finished-at="2022-10-31T13:58:55 ART" duration-ms="3203" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,150 +87,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="dragAndDropValidDots()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" started-at="2022-10-28T15:38:47 ART" name="dragAndDropValidDots" finished-at="2022-10-28T15:38:50 ART" duration-ms="3257" status="PASS">
+        <test-method signature="fullProgressBar()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.ProgressBarTest@d62fe5b]" started-at="2022-10-31T13:58:55 ART" name="fullProgressBar" finished-at="2022-10-31T13:59:35 ART" duration-ms="39269" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dragAndDropValidDots -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@24ba9639]" started-at="2022-10-28T15:38:50 ART" name="tearDown" finished-at="2022-10-28T15:38:50 ART" duration-ms="91" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.mja123.appiumPractice.android.externalApp.DragAndDropTest -->
-    </test> <!-- Drag and drop regression -->
-    <test started-at="2022-10-28T15:38:55 ART" name="Drag and drop smoke" finished-at="2022-10-28T15:39:07 ART" duration-ms="12145">
-      <class name="org.mja123.appiumPractice.android.externalApp.DragAndDropTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" started-at="2022-10-28T15:38:55 ART" name="setUp" finished-at="2022-10-28T15:38:58 ART" duration-ms="3230" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[UiAutomator2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[12.0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Android Emulator]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[/app/ApiDemos-debug.apk]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="checkEmptyResultText()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" started-at="2022-10-28T15:38:58 ART" name="checkEmptyResultText" finished-at="2022-10-28T15:39:01 ART" duration-ms="2841" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkEmptyResultText -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" started-at="2022-10-28T15:39:01 ART" name="tearDown" finished-at="2022-10-28T15:39:01 ART" duration-ms="102" status="PASS">
+        </test-method> <!-- fullProgressBar -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.ProgressBarTest@d62fe5b]" started-at="2022-10-31T13:59:35 ART" name="tearDown" finished-at="2022-10-31T13:59:35 ART" duration-ms="105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" started-at="2022-10-28T15:39:01 ART" name="setUp" finished-at="2022-10-28T15:39:04 ART" duration-ms="3195" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[UiAutomator2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[12.0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Android Emulator]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[/app/ApiDemos-debug.apk]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="dragAndDropInvalidDot()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" started-at="2022-10-28T15:39:04 ART" name="dragAndDropInvalidDot" finished-at="2022-10-28T15:39:07 ART" duration-ms="2667" status="PASS">
-          <exception class="org.mja123.appiumPractice.android.ElementNotFound">
-            <message>
-              <![CDATA[Source and/or destination values out of range]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.mja123.appiumPractice.android.ElementNotFound: Source and/or destination values out of range
-at org.mja123.appiumPractice.android.ApiDemo.view.DragAndDropPage.dragAndDropDot(DragAndDropPage.java:30)
-at org.mja123.appiumPractice.android.externalApp.DragAndDropTest.dragAndDropInvalidDot(DragAndDropTest.java:38)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.mja123.appiumPractice.android.ElementNotFound -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dragAndDropInvalidDot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.mja123.appiumPractice.android.externalApp.DragAndDropTest@535779e4]" started-at="2022-10-28T15:39:07 ART" name="tearDown" finished-at="2022-10-28T15:39:07 ART" duration-ms="107" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.mja123.appiumPractice.android.externalApp.DragAndDropTest -->
-    </test> <!-- Drag and drop smoke -->
-  </suite> <!-- Drag and drop -->
+      </class> <!-- org.mja123.appiumPractice.android.externalApp.ProgressBarTest -->
+    </test> <!-- Incremental progress bar -->
+  </suite> <!-- Progress Bar -->
 </testng-results>

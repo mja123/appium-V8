@@ -43,9 +43,11 @@ public class DragAndDropPage extends BasePage {
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence sequence = new Sequence(finger, 0);
 
-        sequence.addAction(finger.createPointerMove(Duration.ofSeconds(0), PointerInput.Origin.viewport(), sourceCoordinates.get(0), sourceCoordinates.get(1)));
+        sequence.addAction(finger.createPointerMove(Duration.ofSeconds(0), PointerInput.Origin.viewport(),
+                sourceCoordinates.get(0), sourceCoordinates.get(1)));
         sequence.addAction(finger.createPointerDown(0));
-        sequence.addAction(finger.createPointerMove(Duration.ofSeconds(1), PointerInput.Origin.viewport(), destinationCoordinates.get(0), destinationCoordinates.get(1)));
+        sequence.addAction(finger.createPointerMove(Duration.ofSeconds(1), PointerInput.Origin.viewport(),
+                destinationCoordinates.get(0), destinationCoordinates.get(1)));
         sequence.addAction(finger.createPointerUp(0));
 
         driver.perform(List.of(sequence));
@@ -53,20 +55,18 @@ public class DragAndDropPage extends BasePage {
 
 
     public String displayResultText() {
-        return driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_result_text")).getText();
+        return driver.findElement(AppiumBy.id("drag_result_text")).getText();
     }
 
     private void dotsInstantiation() {
         dots = new ArrayList<>();
 
-
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.elementToBeClickable(AppiumBy.id("io.appium.android.apis:id/drag_dot_1")));
+        explicitClickableWait(driver.findElement(AppiumBy.id("drag_dot_1")));
 
         final int DOTS_COUNT = 3;
 
         for (int i = 0; i < DOTS_COUNT; i++) {
-            dots.add(driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_" + (i + 1))));
+            dots.add(driver.findElement(AppiumBy.id("drag_dot_" + (i + 1))));
         }
     }
 
