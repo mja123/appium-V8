@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DragAndDropTest extends BaseTest {
-    @Test(groups = {"regression"})
+    @Test(groups = {"regression", "dragAndDrop"})
     public void dragAndDropValidDots() throws ElementNotFound {
 
         LOGGER.info("Starting dragAndDropValidDots");
@@ -26,7 +26,7 @@ public class DragAndDropTest extends BaseTest {
     }
 
     @Test(expectedExceptions = ElementNotFound.class,
-            groups = {"smoke"})
+            groups = {"smoke", "dragAndDrop"})
     public void dragAndDropInvalidDot() throws ElementNotFound {
         LOGGER.info("Starting dragAndDropInvalidDot");
         HomePage homePage = new HomePage(driver);
@@ -38,7 +38,7 @@ public class DragAndDropTest extends BaseTest {
         dragAndDropPage.dragAndDropDot(4, -3);
     }
 
-    @Test(groups = {"smoke"})
+    @Test(groups = {"smoke", "dragAndDrop"})
     public void checkEmptyResultText() throws ElementNotFound {
         LOGGER.info("Starting checkEmptyResultText");
         HomePage homePage = new HomePage(driver);
@@ -50,7 +50,7 @@ public class DragAndDropTest extends BaseTest {
         Assert.assertEquals(dragAndDropPage.displayResultText(), "");
     }
 
-    @Test()
+    @Test(groups = "dragAndDrop")
     public void checkResultText() throws ElementNotFound {
         LOGGER.info("Starting checkResultText");
         HomePage homePage = new HomePage(driver);

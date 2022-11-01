@@ -9,10 +9,10 @@
     <parameter name="app" value="/app/ApiDemos-debug.apk"/>
     <parameter name="packageActivity" value=""/>
 
-    <test name="scrolling regression">
+    <test name="scrolling smoke">
         <groups>
             <run>
-                <include name="regression">
+                <include name="smoke">
                     <classes>
                         <class name="org.mja123.appiumPractice.android.externalApp.ScrollTest"/>
                     </classes>
@@ -21,10 +21,10 @@
         </groups>
     </test>
 
-    <test name="drag and drop regression">
+    <test name="drag and drop smoke">
         <groups>
             <run>
-                <include name="regression">
+                <include name="smoke">
                     <classes>
                         <class name="org.mja123.appiumPractice.android.externalApp.DragAndDropTest"/>
                     </classes>
@@ -33,10 +33,10 @@
         </groups>
     </test>
 
-    <test name="progress bar regression">
+    <test name="progress bar smoke">
         <groups>
             <run>
-                <include name="regression">
+                <include name="smoke">
                     <classes>
                         <class name="org.mja123.appiumPractice.android.externalApp.ProgressBarTest"/>
                     </classes>

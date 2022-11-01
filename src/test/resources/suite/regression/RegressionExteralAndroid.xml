@@ -9,7 +9,7 @@
     <parameter name="app" value="/app/ApiDemos-debug.apk"/>
     <parameter name="packageActivity" value=""/>
 
-    <test name="scrolling">
+    <test name="scrolling regression">
         <groups>
             <run>
                 <include name="regression">
@@ -21,12 +21,24 @@
         </groups>
     </test>
 
-    <test name="drag and drop">
+    <test name="drag and drop regression">
         <groups>
             <run>
                 <include name="regression">
                     <classes>
                         <class name="org.mja123.appiumPractice.android.externalApp.DragAndDropTest"/>
+                    </classes>
+                </include>
+            </run>
+        </groups>
+    </test>
+
+    <test name="progress bar regression">
+        <groups>
+            <run>
+                <include name="regression">
+                    <classes>
+                        <class name="org.mja123.appiumPractice.android.externalApp.ProgressBarTest"/>
                     </classes>
                 </include>
             </run>

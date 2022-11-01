@@ -9,21 +9,10 @@
     <parameter name="app" value="/app/ApiDemos-debug.apk"/>
     <parameter name="packageActivity" value=""/>
 
-    <test name="Drag and drop regression">
+    <test name="Drag and drop">
         <groups>
             <run>
-                <include name="regression"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="org.mja123.appiumPractice.android.externalApp.DragAndDropTest"/>
-        </classes>
-    </test>
-
-    <test name="Drag and drop smoke">
-        <groups>
-            <run>
-                <include name="smoke"/>
+                <include name="dragAndDrop"/>
             </run>
         </groups>
         <classes>

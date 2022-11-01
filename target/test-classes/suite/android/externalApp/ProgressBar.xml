@@ -10,9 +10,28 @@
     <parameter name="packageActivity" value=""/>
 
     <test name="Incremental progress bar">
-        <classes>
-            <class name="org.mja123.appiumPractice.android.externalApp.ProgressBarTest"/>
-        </classes>
+        <groups>
+            <run>
+                <include name="incrementalProgressBar">
+                    <classes>
+                        <class name="org.mja123.appiumPractice.android.externalApp.ProgressBarTest"/>
+                    </classes>
+                </include>
+            </run>
+        </groups>
     </test>
+
+    <test name="Dialogs progress bar">
+        <groups>
+            <run>
+                <include name="dialogProgressBar">
+                    <classes>
+                        <class name="org.mja123.appiumPractice.android.externalApp.ProgressBarTest"/>
+                    </classes>
+                </include>
+            </run>
+        </groups>
+    </test>
+
 
 </suite>

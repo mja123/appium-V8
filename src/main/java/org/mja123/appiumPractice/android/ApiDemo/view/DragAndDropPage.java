@@ -61,7 +61,7 @@ public class DragAndDropPage extends BasePage {
     private void dotsInstantiation() {
         dots = new ArrayList<>();
 
-        explicitClickableWait(driver.findElement(AppiumBy.id("drag_dot_1")));
+        explicitClickableWait(AppiumBy.id("drag_dot_1"));
 
         final int DOTS_COUNT = 3;
 

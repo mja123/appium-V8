@@ -46,9 +46,13 @@ public class BasePage {
                         ".scrollIntoView(new UiSelector().text(\"" + text + "\"))"
         ));
     }
-    protected void explicitClickableWait(WebElement element) {
+    protected void explicitClickableWait(By element) {
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    protected void explicitVisibilityWait(By element) {
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(element));
+    }
 }
